@@ -82,6 +82,7 @@ def convert(curl_command):
     支持 -H 'Cookie: xxx' 和 -b 'xxx' 两种方式的cookie提取
     """
     # 提取 headers
+    print(curl_command)
     headers_temp = {}
     for match in re.findall(r"-H '([^:]+): ([^']+)'", curl_command):
         headers_temp[match[0]] = match[1]
