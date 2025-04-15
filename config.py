@@ -109,5 +109,4 @@ def convert(curl_command):
 
     return headers, cookies
 
-print(curl_str)
 headers, cookies = convert(curl_str) if curl_str else (headers, cookies)
