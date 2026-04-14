@@ -105,4 +105,6 @@ def push(content, method):
     elif method == "wxpusher":
         return notifier.push_wxpusher(content, WXPUSHER_SPT)
     else:
-        raise ValueError("❌ 无效的通知渠道，请选择 'pushplus'、'telegram' 或 'wxpusher'")
+        logger.error("❌ 无效的通知渠道 method=%r，请选择 'pushplus'、'telegram' 或 'wxpusher'", method)
+        return False
+        # raise ValueError("❌ 无效的通知渠道，请选择 'pushplus'、'telegram' 或 'wxpusher'")
